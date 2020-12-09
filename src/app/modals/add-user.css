@@ -1,0 +1,15 @@
+.rowbar {
+    width:106%;
+}
+.form-ele {
+    margin-right: 30px;
+}
+mat-radio-group {
+    display: flex;
+    position: relative;
+    top: 20px;
+} 
+
+.textarea {
+    margin-top: 40px;
+}

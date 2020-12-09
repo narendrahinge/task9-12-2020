@@ -1,0 +1,7 @@
+h2 {
+    margin-bottom: 0px;
+    border-bottom: 2px solid gray;
+}
+mat-list-item {
+    border-bottom: 1px solid #dddddd;
+}

@@ -1,0 +1,41 @@
+<h1 mat-dialog-title>Add New User </h1>
+<div mat-dialog-content>
+
+    <div class="form-ele">
+        <mat-form-field class="rowbar">
+            <mat-label>Full Name</mat-label>
+            <input matInput [(ngModel)]="data.userdata.name">
+        </mat-form-field>
+
+        <mat-form-field class="rowbar">
+            <mat-label>Date of birth</mat-label>
+            <input matInput [matDatepicker]="picker" [(ngModel)]="data.userdata.dob">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+
+        <ng-multiselect-dropdown [placeholder]="'Language'" [(ngModel)]="data.userdata.lang" [data]="langList"
+            [settings]="dropdownSettings" (onSelect)="onItemSelect($event)" class="rowbar">
+        </ng-multiselect-dropdown>
+
+
+
+        <mat-radio-group aria-label="Select an option" class="rowbar" [(ngModel)]="data.userdata.gender">
+            <mat-radio-button value="male">Male</mat-radio-button>&nbsp;
+            <mat-radio-button value="female">Female</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-form-field class="rowbar textarea">
+            <mat-label>About</mat-label>
+            <textarea matInput placeholder="type here.." [(ngModel)]="data.userdata.about"></textarea>
+        </mat-form-field>
+    </div>
+
+
+
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="data.userdata" cdkFocusInitial>Save</button>
+</div>

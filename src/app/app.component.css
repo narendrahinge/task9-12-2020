@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+}
+.col-sm-4 {
+    width: 20%;
+    float: left;
+    background-color: #dbdbdb;
+    min-height: 728px;
+    padding: 10px;
+}
+.col-sm-8 {
+    width: 80%;
+    float: right;
+    padding: 10px;
+    min-height: 728px;
+}

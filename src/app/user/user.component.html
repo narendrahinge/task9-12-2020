@@ -1,0 +1,8 @@
+
+ <button mat-raised-button color="primary" (click)="openDialog()">Add User</button>
+
+
+<h2>User List</h2>
+<mat-list role="list">
+  <mat-list-item role="listitem" *ngFor="let user of userlist">{{user.name}}</mat-list-item>
+</mat-list>
